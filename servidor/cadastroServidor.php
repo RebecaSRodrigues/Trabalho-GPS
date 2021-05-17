@@ -1,5 +1,5 @@
 <?php 
-include_once('header.php');
+include_once('../header.php');
 ?>
 <!-- nome completo, CPF, endereço (logradouro, número, bairro, complemento, CEP, cidade e estado), e-mail, celular -->
 <form class="row g-3">
@@ -48,5 +48,5 @@ include_once('header.php');
 </form>
 
 <?php 
-include_once('footer.php');
+include_once('../footer.php');
 ?>

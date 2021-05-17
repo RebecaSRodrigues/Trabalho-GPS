@@ -24,7 +24,7 @@
                     Cadastrar
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Cadastro de Servidor</a></li>
+                    <li><a class="dropdown-item" href="./servidor/cadastroServidor.php">Cadastro de Servidor</a></li>
                     <li><a class="dropdown-item" href="#">Cadastro de Clientes</a></li>
                     <li><a class="dropdown-item" href="#">Cadastro de Serviço</a></li>
                 </ul>
