@@ -19,8 +19,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-                <a class="nav-link" href="#">Cadastro de Servidor</a>
+                <a class="nav-link" href="cadastroServidor.php">Cadastro de Servidor</a>
                 <a class="nav-link" href="#">Cadastro de Clientes</a>
                 <a class="nav-link" href="#">Porcentagem de lucro do administrador</a>
                 <a class="nav-link" href="#">Cadastro de Serviço</a>
