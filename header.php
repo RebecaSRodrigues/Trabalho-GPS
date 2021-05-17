@@ -20,17 +20,26 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Cadastrar
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Cadastro de Servidor</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastro de Clientes</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastro de Serviço</a></li>
-                </ul>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCadastrar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cadastrar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCadastrar">
+                        <li><a class="dropdown-item" href="cadastroServidor.php">Cadastro de Servidor</a></li>
+                        <li><a class="dropdown-item" href="#">Cadastro de Clientes</a></li>
+                        <li><a class="dropdown-item" href="#">Cadastro de Serviço</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownGerenciar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gerenciamento de Cadastros
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownGerenciar">
+                        <li><a class="dropdown-item" href="cadastroServidor.php">Gerenciamento de Servidores</a></li>
+                        <li><a class="dropdown-item" href="#">Gerenciamento de Clientes</a></li>
+                        <li><a class="dropdown-item" href="#">Gerenciamento de Serviços</a></li>
+                    </ul>
                 </li>
                 <a class="nav-link" href="#">Porcentagem de lucro do administrador</a>
-                <a class="nav-link" href="#">Cadastro de Serviço</a>
             </div>
             </div>
         </div>
