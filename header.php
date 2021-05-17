@@ -13,24 +13,33 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.php">Boocket</a>
+            <a class="navbar-brand" href="../index.php">Boocket</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Cadastrar
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="./servidor/cadastroServidor.php">Cadastro de Servidor</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastro de Clientes</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastro de Serviço</a></li>
-                </ul>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCadastrar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cadastrar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCadastrar">
+                        <li><a class="dropdown-item" href="servidor/cadastroServidor.php">Cadastro de Servidor</a></li>
+                        <li><a class="dropdown-item" href="#">Cadastro de Clientes</a></li>
+                        <li><a class="dropdown-item" href="#">Cadastro de Serviço</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownGerenciar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gerenciamento de Cadastros
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownGerenciar">
+                        <li><a class="dropdown-item" href="#">Gerenciamento de Servidores</a></li>
+                        <li><a class="dropdown-item" href="#">Gerenciamento de Clientes</a></li>
+                        <li><a class="dropdown-item" href="#">Gerenciamento de Serviços</a></li>
+                    </ul>
                 </li>
                 <a class="nav-link" href="#">Porcentagem de lucro do administrador</a>
-                <a class="nav-link" href="#">Cadastro de Serviço</a>
             </div>
             </div>
         </div>
