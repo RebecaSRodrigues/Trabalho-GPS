@@ -37,7 +37,6 @@
                         <li><a class="dropdown-item" href="#">Gerenciamento de Servidores</a></li>
                         <li><a class="dropdown-item" href="#">Gerenciamento de Clientes</a></li>
                         <li><a class="dropdown-item" href="#">Gerenciamento de Serviços</a></li>
-                        
                     </ul>
                 </li>
                 <a class="nav-link" href="#">Porcentagem de lucro do administrador</a>
