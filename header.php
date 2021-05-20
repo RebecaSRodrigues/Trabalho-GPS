@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.php">Boocket</a>
+            <a class="navbar-brand" href="/Trabalho-GPS">Boocket</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +24,7 @@
                         Cadastrar
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownCadastrar">
-                        <li><a class="dropdown-item" href="servidor/cadastroServidor.php">Cadastro de Servidor</a></li>
+                        <li><a class="dropdown-item" href="/Trabalho-GPS/servidor/cadastroServidor.php">Cadastro de Servidor</a></li>
                         <li><a class="dropdown-item" href="#">Cadastro de Clientes</a></li>
                         <li><a class="dropdown-item" href="#">Cadastro de Serviço</a></li>
                     </ul>
@@ -34,7 +34,7 @@
                         Gerenciamento de Cadastros
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownGerenciar">
-                        <li><a class="dropdown-item" href="#">Gerenciamento de Servidores</a></li>
+                        <li><a class="dropdown-item" href="/Trabalho-GPS/servidor/gerenciamentoServidor.php">Gerenciamento de Servidores</a></li>
                         <li><a class="dropdown-item" href="#">Gerenciamento de Clientes</a></li>
                         <li><a class="dropdown-item" href="#">Gerenciamento de Serviços</a></li>
                     </ul>

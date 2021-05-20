@@ -41,7 +41,7 @@ CREATE TABLE `cliente` (
   `email` varchar(255) NOT NULL,
   `celular` varchar(255) NOT NULL,
   `observacao` text NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `statusCliente` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -79,7 +79,7 @@ CREATE TABLE `servidor` (
   `email` varchar(100) NOT NULL,
   `celular` varchar(100) NOT NULL,
   `observacao` text NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `statusServidor` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
