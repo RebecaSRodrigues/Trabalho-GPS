@@ -12,7 +12,7 @@
 <div class="container mt-5">
     <form class="form row g-3" action="" method="post">
         <div class="col-md-6">
-            <label for="inputCpf" class="form-label">Cpf</label>
+            <label for="inputCpf" class="form-label">CPF</label>
             <input type="text" class="form-control" id="inputCpf" name="inputCpf" value="<?php echo $servidor[0]["cpf"] ?>" required disabled>
         </div>
         <div class="col-md-6">
@@ -60,7 +60,7 @@
             <input type="text" class="form-control" id="inputObservacao" name="inputObservacao" value="<?php echo $servidor[0]["observacao"] ?>" required>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary" name="updateButton">Cadastrar</button>
+            <button type="submit" class="btn btn-primary" name="updateButton">Atualizar</button>
         </div>
     </form>
 </div>

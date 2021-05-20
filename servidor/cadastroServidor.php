@@ -7,7 +7,7 @@
 <div class="container mt-5">
     <form class="form row g-3" action="" method="post">
         <div class="col-md-6">
-            <label for="inputCpf" class="form-label">Cpf</label>
+            <label for="inputCpf" class="form-label">CPF</label>
             <input type="text" class="form-control" id="inputCpf" name="inputCpf" required>
         </div>
         <div class="col-md-6">
