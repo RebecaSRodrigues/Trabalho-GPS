@@ -66,7 +66,6 @@ CREATE TABLE `servico` (
 --
 
 CREATE TABLE `servidor` (
-  `id` int(11) NOT NULL,
   `cpf` varchar(100) NOT NULL,
   `nomeCompleto` varchar(100) NOT NULL,
   `logradouro` varchar(100) NOT NULL,
@@ -104,7 +103,7 @@ ALTER TABLE `servico`
 -- Índices para tabela `servidor`
 --
 ALTER TABLE `servidor`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`cpf`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -120,12 +119,6 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de tabela `servico`
 --
 ALTER TABLE `servico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `servidor`
---
-ALTER TABLE `servidor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
