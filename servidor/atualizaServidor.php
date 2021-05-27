@@ -71,6 +71,7 @@
     $servidor1 = new Servidor();
         
     if (isset($_POST['updateButton'])) {
+        $servidor1->setCpf($_GET["cpf"]);
         $servidor1->setNomeCompleto($_POST["inputNome"]);
         $servidor1->setEmail($_POST["inputEmail"]);
         $servidor1->setLogradouro($_POST["inputLogradouro"]);
@@ -83,7 +84,7 @@
         $servidor1->setCelular($_POST["inputCelular"]);
         $servidor1->setObservacao($_POST["inputObservacao"]);
         $servidor1->setStatusServidor(true);
-
+        
         $servidor1->updateServidor();
 
     }
