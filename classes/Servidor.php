@@ -171,7 +171,7 @@ class Servidor {
         return $servidores;
     }
 
-    public function selectById(){
+    public function selectByCpf(){
         // Prepara o comando SQL
         $sql = "SELECT * FROM servidor Where cpf = $this->cpf";        
 

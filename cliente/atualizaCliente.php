@@ -71,7 +71,6 @@
     $cliente1 = new Cliente();
         
     if (isset($_POST['updateButton'])) {
-        $cliente1->setId($_GET["id"]);
         $cliente1->setNomeCompleto($_POST["inputNome"]);
         $cliente1->setEmail($_POST["inputEmail"]);
         $cliente1->setLogradouro($_POST["inputLogradouro"]);
