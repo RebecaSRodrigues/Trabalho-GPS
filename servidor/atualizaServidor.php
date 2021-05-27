@@ -5,7 +5,7 @@
     $servidorClass = new Servidor();
     $servidorClass->setCpf($_GET["cpf"]);
 
-    $servidor = $servidorClass->selectByCpf()
+    $servidor = $servidorClass->selectByCpf();
 ?>
 
 <!-- nome completo, CPF, endereço (logradouro, número, bairro, complemento, CEP, cidade e estado), e-mail, celular -->
