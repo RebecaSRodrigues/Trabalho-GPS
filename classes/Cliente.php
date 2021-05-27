@@ -179,7 +179,7 @@ class Cliente {
         return $clientes;
     }
 
-    public function selectById(){
+    public function selectByCpf(){
         // Prepara o comando SQL
         $sql = "SELECT * FROM cliente Where cpf = $this->cpf";        
 
