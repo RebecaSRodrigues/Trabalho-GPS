@@ -27,14 +27,6 @@ class Cliente {
 
     }
 
-    public function getId() {
-        return $this->id;
-    }
-
-    public function setId($id) {
-        $this->id = $id;
-    }
-
     public function getCpf() {
         return $this->cpf;
     }
@@ -222,7 +214,7 @@ class Cliente {
                 estado = '{$this->estado}',
                 celular = '{$this->celular}',
                 observacao = '{$this->observacao}' 
-                WHERE id = '{$this->id}'" ;
+                WHERE cpf = '{$this->cpf}'" ;
 
 
         // Executa o comando SQL

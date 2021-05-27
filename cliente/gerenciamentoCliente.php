@@ -1,14 +1,14 @@
 <?php
     include_once('../header.php');
-    require '../classes/Servidor.php';
+    require '../classes/Cliente.php';
     
-    $servidor = new Servidor();
+    $cliente = new Cliente();
 
-    $allservidores = $servidor->selectAll();
+    $allClientes = $cliente->selectAll();
 ?>
 
 	<div class="container">
-        <h3 class="text-center pt-5">Servidores</h3>
+        <h3 class="text-center pt-5">Cliente</h3>
         <a class="row d-flex justify-content-center" href="../index.php">
                 <button type="button" class="btn btn-dark">Pagina Inicial</button>
         </a>
@@ -37,30 +37,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($allservidores as $servidor): ?>
+                    <?php foreach ($allClientes as $cliente): ?>
                         <tr>
-                            <td><?php echo $servidor['cpf'];?></td>
-                            <td><?php echo $servidor['nomeCompleto'];?></td>
-                            <td><?php echo $servidor['logradouro'];?></td>
-                            <td><?php echo $servidor['numero'];?></td>
-                            <td><?php echo $servidor['bairro'];?></td>
-                            <td><?php echo $servidor['complemento'];?></td>
-                            <td><?php echo $servidor['cep'];?></td>
-                            <td><?php echo $servidor['cidade'];?></td>
-                            <td><?php echo $servidor['estado'];?></td>
-                            <td><?php echo $servidor['email'];?></td>
-                            <td><?php echo $servidor['celular'];?></td>
-                            <td><?php echo $servidor['observacao'];?></td>
-                            <?php if ($servidor['statusServidor'] == 1): ?>
+                            <td><?php echo $cliente['cpf'];?></td>
+                            <td><?php echo $cliente['nomeCompleto'];?></td>
+                            <td><?php echo $cliente['logradouro'];?></td>
+                            <td><?php echo $cliente['numero'];?></td>
+                            <td><?php echo $cliente['bairro'];?></td>
+                            <td><?php echo $cliente['complemento'];?></td>
+                            <td><?php echo $cliente['cep'];?></td>
+                            <td><?php echo $cliente['cidade'];?></td>
+                            <td><?php echo $cliente['estado'];?></td>
+                            <td><?php echo $cliente['email'];?></td>
+                            <td><?php echo $cliente['celular'];?></td>
+                            <td><?php echo $cliente['observacao'];?></td>
+                            <?php if ($cliente['statusCliente'] == 1): ?>
                                 <td>Ativo</td>
                             <?php else: ?>
                                 <td>Inativo</td>
                             <?php endif; ?>  
                             <td>
-                                <a href="gerenciamentoServidor.php?cpf=<?= $servidor['cpf']; ?>&&metodo=status&&statusServidor=<?= $servidor['statusServidor']; ?>">
+                                <a href="gerenciamentocliente.php?cpf=<?= $cliente['cpf']; ?>&&metodo=status&&statusCliente=<?= $cliente['statusCliente']; ?>">
                                     <button class="btn btn-dark text-center" name="status" id="statusButton">Inativo/Ativo</button>
                                 </a>
-                                <a href="atualizaServidor.php?id=<?php echo $servidor['cpf']; ?>&&metodo=edit">
+                                <a href="atualizacliente.php?cpf=<?php echo $cliente['cpf']; ?>&&metodo=edit">
                                     <button id="editar" class="btn btn-dark text-center mt-1" name="editar">Editar</button>
                                 </a>
                             </td>
@@ -75,17 +75,17 @@
 <?php
     include_once('../footer.php');
 
-    $servidor1 = new Servidor();
+    $cliente1 = new cliente();
     
-    if (isset($_GET['cpf']) && $_GET['metodo'] == "status") {
-        $servidor1->setCPF($_GET['cpf']);
+    if (isset($_GET['CPF']) && $_GET['metodo'] == "status") {
+        $cliente1->setCPF($_GET['CPF']);
 
-        if ($_GET['statusServidor'] == 1) {
-            $servidor1->setStatusServidor(false);
+        if ($_GET['statuscliente'] == 1) {
+            $cliente1->setStatusCliente(false);
         } else {
-            $servidor1->setStatusServidor(true);
+            $cliente1->setStatusCliente(true);
         }
         
-        $servidor1->ativoServidor();
+        $cliente1->ativocliente();
     }
 ?>

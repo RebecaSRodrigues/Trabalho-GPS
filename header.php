@@ -35,7 +35,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownGerenciar">
                         <li><a class="dropdown-item" href="/Trabalho-GPS/servidor/gerenciamentoServidor.php">Gerenciamento de Servidores</a></li>
-                        <li><a class="dropdown-item" href="#">Gerenciamento de Clientes</a></li>
+                        <li><a class="dropdown-item" href="/Trabalho-GPS/cliente/gerenciamentoCliente.php">Gerenciamento de Clientes</a></li>
                         <li><a class="dropdown-item" href="#">Gerenciamento de Serviços</a></li>
                     </ul>
                 </li>

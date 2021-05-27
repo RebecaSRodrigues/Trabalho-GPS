@@ -2,7 +2,6 @@
 
 class Servidor {
 
-    private $id;
     private $cpf;
     private $nomeCompleto;
     private $logradouro;
@@ -26,14 +25,6 @@ class Servidor {
         // Define o local da hora
         date_default_timezone_set('America/Sao_Paulo');
 
-    }
-
-    public function getId() {
-        return $this->id;
-    }
-
-    public function setId($id) {
-        $this->id = $id;
     }
 
     public function getCpf() {
@@ -223,7 +214,7 @@ class Servidor {
                 estado = '{$this->estado}',
                 celular = '{$this->celular}',
                 observacao = '{$this->observacao}' 
-                WHERE id = '{$this->id}'" ;
+                WHERE cpf = '{$this->cpf}'" ;
 
 
         // Executa o comando SQL
