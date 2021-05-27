@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Maio-2021 às 01:09
+-- Tempo de geração: 28-Maio-2021 às 01:04
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -51,8 +51,8 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `servico` (
   `id` int(11) NOT NULL,
-  `cpf_cliente` int(11) NOT NULL,
-  `cpf_servidor` int(11) NOT NULL,
+  `cpf_cliente` varchar(100) NOT NULL,
+  `cpf_servidor` varchar(100) NOT NULL,
   `tipo_servico` varchar(255) NOT NULL,
   `duracao` varchar(255) NOT NULL,
   `preco_total` double NOT NULL
@@ -95,8 +95,8 @@ ALTER TABLE `cliente`
 --
 ALTER TABLE `servico`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `cpf_servidor` (`cpf_servidor`),
-  ADD KEY `cpf_cliente` (`cpf_cliente`);
+  ADD KEY `cpf_cliente` (`cpf_cliente`),
+  ADD KEY `cpf_servidor` (`cpf_servidor`);
 
 --
 -- Índices para tabela `servidor`
@@ -105,18 +105,25 @@ ALTER TABLE `servidor`
   ADD PRIMARY KEY (`cpf`);
 
 --
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
 -- AUTO_INCREMENT de tabela `servico`
 --
 ALTER TABLE `servico`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+--
+-- Restrições para despejos de tabelas
+--
 
 --
 -- Limitadores para a tabela `servico`
 --
 ALTER TABLE `servico`
-  ADD CONSTRAINT `servico_ibfk_1` FOREIGN KEY (`cpf_servidor`) REFERENCES `servidor` (`cpf`),
-  ADD CONSTRAINT `servico_ibfk_2` FOREIGN KEY (`cpf_cliente`) REFERENCES `cliente` (`cpf`);
+  ADD CONSTRAINT `servico_ibfk_1` FOREIGN KEY (`cpf_cliente`) REFERENCES `cliente` (`cpf`),
+  ADD CONSTRAINT `servico_ibfk_2` FOREIGN KEY (`cpf_servidor`) REFERENCES `servidor` (`cpf`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
