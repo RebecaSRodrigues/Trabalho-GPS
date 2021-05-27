@@ -1,6 +1,6 @@
 <?php 
     include_once('../header.php');
-    require '../classes/Servidor.php';
+    require '../classes/Cliente.php';
 ?>
 
 <!-- nome completo, CPF, endereço (logradouro, número, bairro, complemento, CEP, cidade e estado), e-mail, celular -->
@@ -63,23 +63,23 @@
 <?php 
     include_once('../footer.php');
 
-    $servidor = new Servidor();
+    $cliente = new Cliente();
         
     if (isset($_POST['insertButton'])) {
-        $servidor->setCpf($_POST["inputCpf"]);
-        $servidor->setNomeCompleto($_POST["inputNome"]);
-        $servidor->setEmail($_POST["inputEmail"]);
-        $servidor->setLogradouro($_POST["inputLogradouro"]);
-        $servidor->setNumero($_POST["inputNumero"]);
-        $servidor->setBairro($_POST["inputBairro"]);
-        $servidor->setComplemento($_POST["inputComplemento"]);
-        $servidor->setCep($_POST["inputCep"]);
-        $servidor->setCidade($_POST["inputCidade"]);
-        $servidor->setEstado($_POST["inputEstado"]);
-        $servidor->setCelular($_POST["inputCelular"]);
-        $servidor->setObservacao($_POST["inputObservacao"]);
-        $servidor->setStatusServidor(true);
+        $cliente->setCpf($_POST["inputCpf"]);
+        $cliente->setNomeCompleto($_POST["inputNome"]);
+        $cliente->setEmail($_POST["inputEmail"]);
+        $cliente->setLogradouro($_POST["inputLogradouro"]);
+        $cliente->setNumero($_POST["inputNumero"]);
+        $cliente->setBairro($_POST["inputBairro"]);
+        $cliente->setComplemento($_POST["inputComplemento"]);
+        $cliente->setCep($_POST["inputCep"]);
+        $cliente->setCidade($_POST["inputCidade"]);
+        $cliente->setEstado($_POST["inputEstado"]);
+        $cliente->setCelular($_POST["inputCelular"]);
+        $cliente->setObservacao($_POST["inputObservacao"]);
+        $cliente->setStatusCliente(true);
 
-        $servidor->insertServidor();
+        $cliente->insertCliente();
     }
 ?>

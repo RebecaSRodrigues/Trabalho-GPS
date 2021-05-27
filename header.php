@@ -25,8 +25,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownCadastrar">
                         <li><a class="dropdown-item" href="/Trabalho-GPS/servidor/cadastroServidor.php">Cadastro de Servidor</a></li>
-                        <li><a class="dropdown-item" href="#">Cadastro de Clientes</a></li>
-                        <li><a class="dropdown-item" href="#">Cadastro de Serviço</a></li>
+                        <li><a class="dropdown-item" href="/Trabalho-GPS/cliente/cadastroCliente.php">Cadastro de Clientes</a></li>
+                        <li><a class="dropdown-item" href="/Trabalho-GPS/servico/cadastroServico.php">Cadastro de Serviço</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
