@@ -2,7 +2,6 @@
 
 class Cliente {
 
-    private $id;
     private $cpf;
     private $nomeCompleto;
     private $logradouro;
@@ -140,7 +139,7 @@ class Cliente {
         $this->statusCliente = $statusCliente;
     }
 
-    public function insertServidor(){ 
+    public function insertCliente(){ 
         
         // Prepara o comando SQL
         $sql = "INSERT INTO cliente (cpf, nomeCompleto, logradouro, numero, bairro, complemento, cep, cidade, estado, email, celular, observacao, statusCliente) 
@@ -166,40 +165,40 @@ class Cliente {
 
     public function selectAll(){
         // Prepara o comando SQL
-        $sql = "SELECT * FROM servidor";        
+        $sql = "SELECT * FROM cliente";        
 
         // Executa a query           
         $resultado = mysqli_query($this->conn, $sql);
         
         // Armazena os dados em um array
-        $servidores = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+        $clientes = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
         // Libera o $resultado da memória
         mysqli_free_result($resultado);
 
-        return $servidores;
+        return $clientes;
     }
 
     public function selectById(){
         // Prepara o comando SQL
-        $sql = "SELECT * FROM cliente Where id = $this->id";        
+        $sql = "SELECT * FROM cliente Where cpf = $this->cpf";        
 
         // Executa a query           
         $resultado = mysqli_query($this->conn, $sql);
         
         // Armazena os dados em um array
-        $servidor = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+        $cliente = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
         // Libera o $resultado da memória
         mysqli_free_result($resultado);
 
-        return $servidor;
+        return $cliente;
     }
 
-    public function ativoServidor(){ 
+    public function ativoCliente(){ 
         
         // Prepara o comando SQL
-        $sql = "UPDATE cliente SET statusCliente = '{$this->statusCliente}'";
+        $sql = "UPDATE cliente SET statusCliente = '{$this->statusCliente}' WHERE cpf = $this->cpf";
 
         // Executa o comando SQL
         if(!mysqli_query($this->conn, $sql)){
@@ -208,7 +207,7 @@ class Cliente {
         exit;
     }
 
-    public function updateServidor(){ 
+    public function updateCliente(){ 
         
         // Prepara o comando SQL
         $sql = "UPDATE cliente 

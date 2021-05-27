@@ -28,7 +28,6 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cliente` (
-  `id` int(11) NOT NULL,
   `cpf` varchar(11) NOT NULL,
   `nomeCompleto` varchar(255) NOT NULL,
   `logradouro` varchar(255) NOT NULL,
@@ -52,8 +51,8 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `servico` (
   `id` int(11) NOT NULL,
-  `id_cliente` int(11) NOT NULL,
-  `id_servidor` int(11) NOT NULL,
+  `cpf_cliente` int(11) NOT NULL,
+  `cpf_servidor` int(11) NOT NULL,
   `tipo_servico` varchar(255) NOT NULL,
   `duracao` varchar(255) NOT NULL,
   `preco_total` double NOT NULL
@@ -89,15 +88,15 @@ CREATE TABLE `servidor` (
 -- Índices para tabela `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`cpf`);
 
 --
 -- Índices para tabela `servico`
 --
 ALTER TABLE `servico`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_servidor` (`id_servidor`),
-  ADD KEY `id_cliente` (`id_cliente`);
+  ADD KEY `cpf_servidor` (`cpf_servidor`),
+  ADD KEY `cpf_cliente` (`cpf_cliente`);
 
 --
 -- Índices para tabela `servidor`
@@ -106,31 +105,18 @@ ALTER TABLE `servidor`
   ADD PRIMARY KEY (`cpf`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `cliente`
---
-ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de tabela `servico`
 --
 ALTER TABLE `servico`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- Restrições para despejos de tabelas
---
 
 --
 -- Limitadores para a tabela `servico`
 --
 ALTER TABLE `servico`
-  ADD CONSTRAINT `servico_ibfk_1` FOREIGN KEY (`id_servidor`) REFERENCES `servidor` (`id`),
-  ADD CONSTRAINT `servico_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`);
+  ADD CONSTRAINT `servico_ibfk_1` FOREIGN KEY (`cpf_servidor`) REFERENCES `servidor` (`cpf`),
+  ADD CONSTRAINT `servico_ibfk_2` FOREIGN KEY (`cpf_cliente`) REFERENCES `cliente` (`cpf`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

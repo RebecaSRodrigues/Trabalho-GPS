@@ -182,7 +182,7 @@ class Servidor {
 
     public function selectById(){
         // Prepara o comando SQL
-        $sql = "SELECT * FROM servidor Where id = $this->id";        
+        $sql = "SELECT * FROM servidor Where cpf = $this->cpf";        
 
         // Executa a query           
         $resultado = mysqli_query($this->conn, $sql);
@@ -199,7 +199,7 @@ class Servidor {
     public function ativoServidor(){ 
         
         // Prepara o comando SQL
-        $sql = "UPDATE servidor SET statusServidor = '{$this->statusServidor}'";
+        $sql = "UPDATE servidor SET statusServidor = '{$this->statusServidor}' WHERE cpf = $this->cpf";
 
         // Executa o comando SQL
         if(!mysqli_query($this->conn, $sql)){
