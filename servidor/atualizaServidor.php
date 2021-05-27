@@ -3,9 +3,9 @@
     require '../classes/Servidor.php';
 
     $servidorClass = new Servidor();
-    $servidorClass->setId($_GET["id"]);
+    $servidorClass->setCpf($_GET["cpf"]);
 
-    $servidor = $servidorClass->selectById()
+    $servidor = $servidorClass->selectByCpf()
 ?>
 
 <!-- nome completo, CPF, endereço (logradouro, número, bairro, complemento, CEP, cidade e estado), e-mail, celular -->
@@ -71,7 +71,6 @@
     $servidor1 = new Servidor();
         
     if (isset($_POST['updateButton'])) {
-        $servidor1->setId($_GET["id"]);
         $servidor1->setNomeCompleto($_POST["inputNome"]);
         $servidor1->setEmail($_POST["inputEmail"]);
         $servidor1->setLogradouro($_POST["inputLogradouro"]);

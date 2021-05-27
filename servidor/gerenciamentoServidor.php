@@ -60,7 +60,7 @@
                                 <a href="gerenciamentoServidor.php?cpf=<?= $servidor['cpf']; ?>&&metodo=status&&statusServidor=<?= $servidor['statusServidor']; ?>">
                                     <button class="btn btn-dark text-center" name="status" id="statusButton">Inativo/Ativo</button>
                                 </a>
-                                <a href="atualizaServidor.php?id=<?php echo $servidor['cpf']; ?>&&metodo=edit">
+                                <a href="atualizaServidor.php?cpf=<?php echo $servidor['cpf']; ?>&&metodo=edit">
                                     <button id="editar" class="btn btn-dark text-center mt-1" name="editar">Editar</button>
                                 </a>
                             </td>
