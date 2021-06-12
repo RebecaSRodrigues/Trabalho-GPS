@@ -1,9 +1,9 @@
 body {
-    background-color: #ADD8E6;
+    background-color: #F2F2F2;
 }
 
 thead {
-    background-color: royalblue;
+    background-color: #F29544;
 }
 
 /* width */
@@ -19,6 +19,31 @@ thead {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(116, 114, 133);
+  background: #BFB99B;
   border-radius: 10px;
+}
+
+.navbar {
+  background-color: #BFB99B;
+  opacity: 80%;
+}
+
+.navbar .nav-link:hover {
+  background-color: #aca37a;
+  border-radius: 15px;
+}
+
+.navbar a {
+  color: black !important;
+}
+
+.div-form {
+  background-color: #F2E18D ;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.btn-primary, .btn-primary:hover {
+  background-color: #D95F69;
+  border-color: #812F33;
 }

@@ -12,7 +12,7 @@
 ?>
 
 <!-- nome completo, CPF, endereço (logradouro, número, bairro, complemento, CEP, cidade e estado), e-mail, celular -->
-<div class="container mt-5">
+<div class="container mt-5 div-form">
     <form class="form row g-3" action="" method="post">
         <div class="col-md-4">
             <label for="selectCliente" class="form-label">Cliente</label>
