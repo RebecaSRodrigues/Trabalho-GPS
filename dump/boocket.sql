@@ -54,7 +54,8 @@ CREATE TABLE `servico` (
   `cpf_cliente` varchar(100) NOT NULL,
   `cpf_servidor` varchar(100) NOT NULL,
   `tipo_servico` varchar(255) NOT NULL,
-  `duracao` varchar(255) NOT NULL,
+  `dtInicio` date NOT NULL,
+  `dtFinal` date NOT NULL,
   `preco_total` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

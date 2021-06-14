@@ -21,7 +21,7 @@ class Servico {
     }
 
     public function getCliente() {
-        return $cliente->getCpf;
+        return $this->cliente;
     }
 
     public function setCliente($cliente) {
@@ -71,7 +71,7 @@ class Servico {
     public function insertServico(){ 
 
         // Prepara o comando SQL
-        $sql = "INSERT INTO servico (cliente, servidor, dtInicio, dtFinal, tipoServico, preco) 
+        $sql = "INSERT INTO servico (cpf_cliente, cpf_servidor, dtInicio, dtFinal, tipo_servico, preco_total) 
                 VALUES('{$this->cliente}',
                        '{$this->servidor}',
                        '{$this->dtInicio}',
@@ -87,7 +87,7 @@ class Servico {
 
     public function selectAll(){
         // Prepara o comando SQL
-        $sql = "SELECT * FROM servicos";        
+        $sql = "SELECT * FROM servico";        
 
         // Executa a query           
         $resultado = mysqli_query($this->conn, $sql);

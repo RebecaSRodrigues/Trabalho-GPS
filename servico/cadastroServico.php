@@ -11,12 +11,11 @@
     $allClientes = $cliente->selectAll();
 ?>
 
-<!-- nome completo, CPF, endereço (logradouro, número, bairro, complemento, CEP, cidade e estado), e-mail, celular -->
 <div class="container mt-5 div-form">
     <form class="form row g-3" action="" method="post">
         <div class="col-md-4">
             <label for="selectCliente" class="form-label">Cliente</label>
-            <select class="form-select" id="selectCliente" aria-label="Selecione um cliente" required>
+            <select class="form-select" name="selectCliente" id="selectCliente" aria-label="Selecione um cliente" required>
             <?php foreach ($allClientes as $cliente): ?>
                 <option class="selectCliente" value="<?php echo $cliente['cpf'];?>"><?php echo $cliente['nomeCompleto'];?></option>
             <?php endforeach; ?>
@@ -24,7 +23,7 @@
         </div>
         <div class="col-md-4">
             <label for="selectServidor" class="form-label">Servidor</label>
-            <select class="form-select" id="selectServidor" aria-label="Selecione um servidor">
+            <select class="form-select" name="selectServidor" id="selectServidor" aria-label="Selecione um servidor">
                 <?php foreach ($allServidores as $servidor): ?>
                     <option class="selectServidor" value="<?php echo $servidor['cpf'];?>"><?php echo $servidor['nomeCompleto'];?></option>
                 <?php endforeach; ?>
@@ -60,8 +59,11 @@
     if (isset($_POST['insertButton'])) {
         $servico->setCliente($_POST["selectCliente"]);
         $servico->setServidor($_POST["selectServidor"]);
-        /* $servico->setStatusCliente(true); */
-
-        /* $servico->insertServico(); */
+        $servico->setDtInicio($_POST["inputInicioDt"]);
+        $servico->setDtFinal($_POST["inputFinalDt"]);
+        $servico->setTipoServico($_POST["inputServico"]);
+        $servico->setPreco($_POST["inputPreco"]);
+        
+        $servico->insertServico();
     }
 ?>
