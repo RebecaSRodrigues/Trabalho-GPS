@@ -20,7 +20,8 @@
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-hover table-fill">
                 <thead class="thead-dark">
-                    <tr>
+                    <tr>   
+                        <th>ID</th>
                         <th>Cliente</th>
                         <th>Servidor</th>
                         <th>Tipo de Servico</th>
@@ -33,6 +34,7 @@
                 <tbody>
                     <?php foreach ($allServicos as $servico): ?>
                         <tr>
+                            <td><?= $servico['id'];?></td>
                             <?php
                                 $cliente = new Cliente(); 
                                 $cliente->setCpf($servico['cpf_cliente']);
@@ -52,10 +54,7 @@
                             <td><?= $servico['dtFinal'];?></td>
                             <td><?= $servico['preco_total'];?></td>
                             <td class="text-center">
-                                <a href="#">
-                                    <button class="btn btn-dark text-center" name="status" id="statusButton">Inativo/Ativo</button>
-                                </a>
-                                <a href="#">
+                                <a href="atualizaServico.php?id=<?php echo $servico['id']; ?>&&metodo=edit">
                                     <button id="editar" class="btn btn-dark text-center mt-1" name="editar">Editar</button>
                                 </a>
                             </td>
