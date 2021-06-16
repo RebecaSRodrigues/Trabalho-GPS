@@ -2,6 +2,7 @@
 
 class Servico {
 
+    private $id;
     private $cliente;
     private $servidor;
     private $dtInicio;
@@ -18,6 +19,14 @@ class Servico {
         // Define o local da hora
         date_default_timezone_set('America/Sao_Paulo');
 
+    }
+
+    public function getId() {
+        return $this->id;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
     }
 
     public function getCliente() {
