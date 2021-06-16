@@ -9,7 +9,7 @@
 ?>
 
 <div class="container">
-        <h3 class="text-center pt-5">Cliente</h3>
+        <h3 class="text-center pt-5">Serviço</h3>
         <a class="row d-flex justify-content-center" href="../index.php">
                 <button type="button" class="btn btn-dark">Pagina Inicial</button>
         </a>
@@ -22,8 +22,8 @@
                 <thead class="thead-dark">
                     <tr>   
                         <th>ID</th>
-                        <th>Cliente</th>
-                        <th>Servidor</th>
+                        <th>CPF Cliente</th>
+                        <th>CPF Servidor</th>
                         <th>Tipo de Servico</th>
                         <th>Data de inicio</th>
                         <th>Data do fim</th>

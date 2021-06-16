@@ -110,6 +110,39 @@ class Servico {
         return $servicos;
     }
 
+    public function selectById(){
+        // Prepara o comando SQL
+        $sql = "SELECT * FROM servico Where id = $this->id";        
+
+        // Executa a query           
+        $resultado = mysqli_query($this->conn, $sql);
+        
+        // Armazena os dados em um array
+        $servico = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+
+        // Libera o $resultado da memória
+        mysqli_free_result($resultado);
+
+        return $servico;
+    }
+
+    public function updateServico(){ 
+        
+        // Prepara o comando SQL
+        $sql = "UPDATE servico 
+                SET dtInicio = '$this->dtInicio', 
+                dtFinal = '$this->dtFinal', 
+                tipo_servico = '$this->tipoServico', 
+                preco_total = '$this->preco'
+                WHERE id = '{$this->id}'" ;
+
+
+        // Executa o comando SQL
+        if(!mysqli_query($this->conn, $sql)){
+            echo "Ocorreu um erro: " . mysqli_error($this->conn) . "<br>";
+        }
+    }
+
     
     private function openConexao(){
         $host = "localhost";
