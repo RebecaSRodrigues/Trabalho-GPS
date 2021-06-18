@@ -6,6 +6,11 @@ thead {
     background-color: #F29544;
 }
 
+.logo {
+  width: 100px;
+  height: 50px;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 20px;
@@ -24,12 +29,12 @@ thead {
 }
 
 .navbar {
-  background-color: #BFB99B;
+  background-color: #bbd5bb;
   opacity: 80%;
 }
 
 .navbar .nav-link:hover {
-  background-color: #aca37a;
+  background-color: #a6c5a6;
   border-radius: 15px;
 }
 
@@ -38,7 +43,7 @@ thead {
 }
 
 .div-form {
-  background-color: #EDF1B5 ;
+  background-color: #F2E18D ;
   padding: 50px;
   border-radius: 15px;
 }
