@@ -29,6 +29,15 @@
                 <?php endforeach; ?>
             </select>
         </div>
+        <div class="col-md-4">
+            <label for="selectCategoria" class="form-label">Categoria do Serviço</label>
+            <select class="form-select" name="selectCategoria" id="selectCategoria" aria-label="Selecione uma categoria">
+                    <option class="selectCategoria" value="2">2 Horas</option>
+                    <option class="selectCategoria" value="4">4 Horas</option>
+                    <option class="selectCategoria" value="6">6 Horas</option>
+                    <option class="selectCategoria" value="8">8 Horas</option>
+            </select>
+        </div>
         <div class="col-md-2">
             <label for="inputInicioDt" class="form-label">Data de Inicio</label>
             <input type="date" class="form-control" id="inputInicioDt" name="inputInicioDt">
@@ -63,6 +72,7 @@
         $servico->setDtFinal($_POST["inputFinalDt"]);
         $servico->setTipoServico($_POST["inputServico"]);
         $servico->setPreco($_POST["inputPreco"]);
+        $servico->setCategoriaServico($_POST["selectCategoria"]);
         
         $servico->insertServico();
     }

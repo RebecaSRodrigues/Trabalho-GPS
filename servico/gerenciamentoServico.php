@@ -28,6 +28,7 @@
                         <th>Data de inicio</th>
                         <th>Data do fim</th>
                         <th>Preco Total</th>
+                        <th>Categoria do Serviço</th>
                         <th>Acao</th>
                     </tr>
                 </thead>
@@ -53,6 +54,7 @@
                             <td><?= $servico['dtInicio'];?></td>
                             <td><?= $servico['dtFinal'];?></td>
                             <td><?= $servico['preco_total'];?></td>
+                            <td><?= $servico['categoria_servico'];?></td>
                             <td class="text-center">
                                 <a href="atualizaServico.php?id=<?php echo $servico['id']; ?>&&metodo=edit">
                                     <button id="editar" class="btn btn-dark text-center mt-1" name="editar">Editar</button>
@@ -78,6 +80,7 @@
         $servico->setDtFinal($_POST["inputFinalDt"]);
         $servico->setTipoServico($_POST["inputServico"]);
         $servico->setPreco($_POST["inputPreco"]);
+        $servico->setCategoriaServico($_POST["selectCategoria"]);
         
         $servico->insertServico();
     }

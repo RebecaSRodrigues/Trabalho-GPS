@@ -9,6 +9,7 @@ class Servico {
     private $dtFinal;
     private $tipoServico;
     private $preco;
+    private $categoriaServico;
 
     private $conn;
 
@@ -77,16 +78,25 @@ class Servico {
         $this->preco = $preco;
     }
 
+    public function getCategoriaServico() {
+        return $this->$categoriaServico;
+    }
+
+    public function setCategoriaServico($categoriaServico) {
+        $this->categoriaServico = $categoriaServico;
+    }
+
     public function insertServico(){ 
 
         // Prepara o comando SQL
-        $sql = "INSERT INTO servico (cpf_cliente, cpf_servidor, dtInicio, dtFinal, tipo_servico, preco_total) 
+        $sql = "INSERT INTO servico (cpf_cliente, cpf_servidor, dtInicio, dtFinal, tipo_servico, preco_total, categoria_servico) 
                 VALUES('{$this->cliente}',
                        '{$this->servidor}',
                        '{$this->dtInicio}',
                        '{$this->dtFinal}',
                        '{$this->tipoServico}',
-                       '{$this->preco}')";
+                       '{$this->preco}',
+                       '{$this->categoriaServico}')";
 
         // Executa o comando SQL
         if(!mysqli_query($this->conn, $sql)){
@@ -133,7 +143,8 @@ class Servico {
                 SET dtInicio = '$this->dtInicio', 
                 dtFinal = '$this->dtFinal', 
                 tipo_servico = '$this->tipoServico', 
-                preco_total = '$this->preco'
+                preco_total = '$this->preco',
+                categoria_servico = '$this->categoriaServico'
                 WHERE id = '{$this->id}'" ;
 
 

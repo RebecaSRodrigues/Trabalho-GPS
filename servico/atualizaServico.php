@@ -38,6 +38,20 @@
             <label for="inputPreco" class="form-label">Preço Total</label>
             <input type="number" min="1" step="any" class="form-control" id="inputPreco" name="inputPreco" value="<?php echo $servico[0]["preco_total"] ?>">
         </div>
+        <div class="col-md-2">
+            <label for="selectCategoria" class="form-label">Categoria do Serviço</label>            
+            <select class="form-select" name="selectCategoria" id="selectCategoria" aria-label="Selecione uma categoria">
+                    <optgroup label="Categoria Selecionada">
+                        <option value="<?php echo $servico[0]["categoria_servico"] ?>" selected><?php echo $servico[0]["categoria_servico"] ?> Horas</option>
+                    </optgroup>
+                    <optgroup label="Outras categorias">
+                        <option class="selectCategoria" value="2">2 Horas</option>
+                        <option class="selectCategoria" value="4">4 Horas</option>
+                        <option class="selectCategoria" value="6">6 Horas</option>
+                        <option class="selectCategoria" value="8">8 Horas</option>
+                    </optgroup>
+            </select>
+        </div>
         <div class="col-12">
             <button type="submit" class="btn btn-primary" name="updateButton">Atualizar</button>
         </div>
@@ -55,6 +69,7 @@
         $servico1->setDtFinal($_POST["inputFinalDt"]);
         $servico1->setTipoServico($_POST["inputServico"]);
         $servico1->setPreco($_POST["inputPreco"]);
+        $servico1->setCategoriaServico($_POST["selectCategoria"]);
 
         $servico1->updateServico();
 
